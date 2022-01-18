@@ -1,13 +1,13 @@
 
-add_executable(waitpid1 waitpid1.c)
-target_link_libraries(waitpid1 PRIVATE libcam)
+add_executable(waitpid_nondeterministic waitpid_nondeterministic.c)
+target_link_libraries(waitpid_nondeterministic PRIVATE cam)
 
-add_executable(waitpid2 waitpid2.c)
-target_link_libraries(waitpid2 PRIVATE libcam)
+add_executable(waitpid_deterministic waitpid_deterministic.c)
+target_link_libraries(waitpid_deterministic PRIVATE cam)
 
-add_executable(print-args print-args.c)
-target_link_libraries(print-args PRIVATE libcam)
+add_executable(print_args print_args.c)
+target_link_libraries(print_args PRIVATE cam)
 
-add_executable(update-args update-args.c)
-target_link_libraries(update-args PRIVATE libcam)
+add_executable(update_args update_args.c)
+target_link_libraries(update_args PRIVATE cam)
 

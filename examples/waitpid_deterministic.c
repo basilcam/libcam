@@ -10,7 +10,7 @@ int main() {
     pid_t pids[N];
    
     for (int i = 0; i < N; i++) {
-        if ((pids[i] = Cam_fork())== 0) {
+        if ((pids[i] = cam_fork()) == 0) {
             exit(100 + i);
         }
     }
@@ -20,7 +20,7 @@ int main() {
         pid_t pid = waitpid(pids[i], &status, 0);
 
         if (pid == -1) {
-            Cam_handleUnixErrora("waitpid error");
+            cam_handle_unix_error("waitpid error");
         }
             
         if (WIFEXITED(status)) {

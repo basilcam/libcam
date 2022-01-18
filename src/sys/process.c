@@ -8,12 +8,6 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
-void cam_handle_unix_error(char *message)
-{
-    fprintf(stderr, "%s: %s\n", message, strerror(errno));
-    exit(EXIT_SUCCESS);
-}
-
 pid_t cam_fork() {
     pid_t pid = fork();
 

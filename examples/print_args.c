@@ -1,6 +1,5 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <cam/sys/process.h>
 
 int main(int argc, char *argv[], char *envp[]) {
 

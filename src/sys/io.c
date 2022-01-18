@@ -2,7 +2,6 @@
 #include <cam/error.h>
 
 int cam_fgetc(FILE *stream) {
-    // getc is the same as fgetc but may be implemented using a macro (thus more performant)
     int data = getc(stream); 
 
     if (data == EOF && ferror(stream)) {
@@ -37,7 +36,8 @@ size_t cam_fread(void *buffer, size_t element_size, size_t num_elements, FILE *s
     }
 }
 
-void cam_fwrite(const void *buffer, size_t element_size, size_t num_elements, FILE *stream) {
+void cam_fwrite(const void *buffer, size_t element_size, size_t num_elements, 
+        FILE *stream) {
     if (fwrite(buffer, element_size, num_elements, stream)) {
         cam_handle_unix_error("fwrite error");
     }
