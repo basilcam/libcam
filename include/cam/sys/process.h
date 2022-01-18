@@ -1,5 +1,5 @@
-#ifndef __CAM_SYS_H__
-#define __CAM_SYS_H__
+#ifndef LIBCAM_SYS_H
+#define LIBCAM_SYS_H
 
 #include <sys/types.h>
 
@@ -32,4 +32,4 @@ char *cam_getenv(const char *name);
 void cam_setenv(const char *name, const char *value, int overwrite);
 void cam_unsetenv(const char *name);
 
-#endif // __CAM_SYS_H__
+#endif // LIBCAM_SYS_H

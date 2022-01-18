@@ -1,5 +1,5 @@
-#ifndef __CAM_IO_H__
-#define __CAM_IO_H__
+#ifndef LIBCAM_IO_H
+#define LIBCAM_IO_H
 
 #include <stdio.h>
 
@@ -19,4 +19,4 @@ size_t cam_fread(void *buffer, size_t element_size, size_t num_elements, FILE *s
 
 void cam_fwrite(const void *buffer, size_t element_size, size_t num_elements, FILE *stream);
 
-#endif // __CAM_IO_H__
+#endif // LIBCAM_IO_H
