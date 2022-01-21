@@ -3,29 +3,16 @@
 
 #include <sys/types.h>
 
-////////////////////////////////////////////////////////////////
-// Logging
-////////////////////////////////////////////////////////////////
-
-void cam_handle_unix_error(char *msg);
-
-////////////////////////////////////////////////////////////////
-// Process control 
-////////////////////////////////////////////////////////////////
-
 pid_t cam_fork(void);
 void cam_execve(const char *filename, char *const argv[], char *const envp[]);
 
-pid_t cam_waitpid(pid_t pid, int *statusCode, int options);
+pid_t cam_waitpid(pid_t pid, int *status_code, int options);
 pid_t cam_wait(int *status);
 
-void cam_kill(pid_t pid, int signalNumber);
-
-unsigned int cam_sleep(unsigned int durationSeconds);
+unsigned int cam_sleep(unsigned int duration_seconds);
 void cam_pause();
-unsigned int cam_alarm(unsigned int delaySeconds);
 
-void cam_setpgid(pid_t pid, pid_t groupId);
+void cam_setpgid(pid_t pid, pid_t pgid);
 pid_t cam_getpgrp();
 
 char *cam_getenv(const char *name);

@@ -1,12 +1,9 @@
-#include <cam/sys/process.h>
-
 #include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
 #include <unistd.h>
-#include <errno.h>
 #include <sys/types.h>
 #include <sys/wait.h>
+#include "cam/sys/process.h"
+#include "cam/error.h"
 
 pid_t cam_fork() {
     pid_t pid = fork();
@@ -44,12 +41,6 @@ pid_t cam_wait(int *status) {
     return pid;
 }
 
-void cam_kill(pid_t pid, int signal_number) {
-    if (kill(pid, signal_number) < 0) {
-        cam_handle_unix_error("kill error");
-    }
-}
-
 unsigned int cam_sleep(unsigned int duration_secs) {
     unsigned int return_code = sleep(duration_secs);
 
@@ -62,10 +53,6 @@ unsigned int cam_sleep(unsigned int duration_secs) {
 
 void cam_pause() {
     pause();
-}
-
-unsigned int cam_alarm(unsigned int delay_secs) {
-    return alarm(delay_secs);
 }
 
 void cam_setpgid(pid_t pid, pid_t group_id) {
