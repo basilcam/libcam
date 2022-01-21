@@ -7,7 +7,9 @@ add_library(cam STATIC
         src/sys/process.c
         src/sys/io.c
         src/error.c
-        src/data/linked_list.c src/sys/signal.c include/cam/sys/signal.h)
+        src/data/linked_list.c
+        src/sys/signal.c
+        src/sio.c)
 target_include_directories(cam PUBLIC include)
 
 add_subdirectory(examples)
