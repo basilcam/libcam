@@ -230,8 +230,3 @@ void cam_ll_iter_add(cam_ll_iter *iter, void *data) {
 
     iter->ll->size++;
 }
-
-
-
-
-

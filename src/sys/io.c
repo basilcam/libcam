@@ -42,4 +42,3 @@ void cam_fwrite(const void *buffer, size_t element_size, size_t num_elements,
         cam_handle_unix_error("fwrite error");
     }
 }
-

@@ -75,4 +75,3 @@ int cam_sigsuspend(const sigset_t *set) {
     }
     return rc;
 }
-
