@@ -54,7 +54,7 @@ static ssize_t sio_putl(long v) {
     return sio_puts(s);
 }
 
-ssize_t cam_sio_puts(char *s) {
+ssize_t cam_sio_puts(const char *s) {
     ssize_t n = sio_puts(s);
     if (n < 0) {
         cam_sio_handle_error("cam_sio_puts error");

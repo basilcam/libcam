@@ -3,7 +3,7 @@
 
 #include <sys/types.h>
 
-ssize_t cam_sio_puts(char *s);
+ssize_t cam_sio_puts(const char *s);
 
 ssize_t cam_sio_putl(long v);
 
