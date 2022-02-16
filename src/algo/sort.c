@@ -135,6 +135,8 @@ void insertionsort(void *array, size_t elem_size, size_t length, cam_cmp compara
     }
 }
 
+// todo: add mergesort
+
 static void swap(void *a, void *b, size_t size) {
     uint8_t temp[size];
     memcpy(temp, a, size);
