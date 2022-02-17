@@ -27,7 +27,7 @@ int main() {
     long data2 = 2;
     long data3 = 3;
 
-    cam_ll *ll = cam_ll_init();
+    cam_ll *ll = cam_ll_create();
     cam_ll_add(ll, &data1);
     cam_ll_add_at(ll, 0, &data2);
     cam_ll_add(ll, &data3);
@@ -48,7 +48,7 @@ int main() {
 
     print_list(ll);
 
-    cam_ll_deinit(ll);
+    cam_ll_destroy(ll);
 
     exit(EXIT_SUCCESS);
 }

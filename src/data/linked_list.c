@@ -3,7 +3,7 @@
 #include <stdbool.h>
 #include "cam/data/linked_list.h"
 
-cam_ll *cam_ll_init() {
+cam_ll *cam_ll_create() {
     cam_ll *ll = (cam_ll *) malloc(sizeof(cam_ll));
     ll->start_node = NULL;
     ll->end_node = NULL;
@@ -11,7 +11,7 @@ cam_ll *cam_ll_init() {
     return ll;
 }
 
-void cam_ll_deinit(cam_ll *ll) {
+void cam_ll_destroy(cam_ll *ll) {
     if (ll->size >= 0) {
         cam_ll_node *node = ll->start_node;
         while (node != NULL) {

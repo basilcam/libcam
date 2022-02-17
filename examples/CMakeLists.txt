@@ -11,9 +11,12 @@ target_link_libraries(ex_print_args PRIVATE cam)
 add_executable(ex_update_args update_args.c)
 target_link_libraries(ex_update_args PRIVATE cam)
 
-add_executable(ex_linked_list data/linked_list.c algo/sort.c)
+add_executable(ex_linked_list data/linked_list.c algo/sort.c data/hashtable.c)
 target_link_libraries(ex_linked_list PRIVATE cam)
 
 add_executable(ex_sort algo/sort.c)
 target_link_libraries(ex_sort PRIVATE cam)
+
+add_executable(ex_hashtable data/hashtable.c)
+target_link_libraries(ex_hashtable PRIVATE cam)
 

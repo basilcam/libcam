@@ -9,7 +9,9 @@ add_library(cam STATIC
         src/error.c
         src/data/linked_list.c
         src/sys/signal.c
-        src/sio.c include/cam/algo/sort.h src/algo/sort.c)
+        src/sio.c
+        src/algo/sort.c
+        src/data/hashtable.c)
 target_include_directories(cam PUBLIC include)
 
 add_subdirectory(examples)

@@ -24,9 +24,9 @@ typedef struct {
     cam_ll_node *prev_node;
 } cam_ll_iter;
 
-cam_ll *cam_ll_init();
+cam_ll *cam_ll_create();
 
-void cam_ll_deinit(cam_ll *ll);
+void cam_ll_destroy(cam_ll *ll);
 
 size_t cam_ll_get_size(cam_ll *ll);
 
