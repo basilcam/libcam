@@ -1,4 +1,3 @@
-
 #include <cam/data/hashtable.h>
 #include <string.h>
 #include <assert.h>

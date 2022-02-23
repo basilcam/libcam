@@ -11,7 +11,7 @@ add_library(cam STATIC
         src/sys/signal.c
         src/sio.c
         src/algo/sort.c
-        src/data/hashtable.c)
+        src/data/hashtable.c src/data/heap.c include/cam/data/heap.h)
 target_include_directories(cam PUBLIC include)
 
 add_subdirectory(examples)
